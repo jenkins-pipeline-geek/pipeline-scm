@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                echo 'Branch: $BRANCH_NAME'
                 echo 'Maven Building..'
             }
         }
