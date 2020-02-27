@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build from feature branch') {
             steps {
-                echo "Branch: ${BRANCH_NAME}"
+                // echo "Branch: ${BRANCH_NAME}" // This is applicable to Multi-branch pipeline
                 echo 'Maven Building..'
             }
         }
