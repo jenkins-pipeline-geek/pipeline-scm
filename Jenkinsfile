@@ -2,13 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Build from feature branch') {
+        stage('Build') {
             steps {
-                echo "Branch: ${BRANCH_NAME}"
+                // echo "Branch: ${BRANCH_NAME}" // This is applicable to Multi-branch pipeline
                 echo 'Maven Building..'
             }
         }
-        stage('Static-analysis from feature branch') {
+        stage('Static-analysis') {
             steps {
                 echo 'Sonar-cube validating..'
             }
@@ -18,7 +18,7 @@ pipeline {
                 echo 'Testing from feature branch'
             }
         }
-        stage('Deploy from feature branch') {
+        stage('Deploy') {
             steps {
                 echo 'Deploying....'
             }
